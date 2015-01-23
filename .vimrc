@@ -37,8 +37,20 @@ set ts=4
 set sw=4
 set sts=4
 set expandtab
+set smarttab
 
 set tags=./tags,./.tags,/usr/include/tags/,/usr/include/.tags
+
+filetype plugin on
+filetype indent on
+
+set ffs=unix,dos,mac
+
+set nobackup
+set nowb
+set noswapfile
+
+set showcmd
 
 " vimdiff conflict resolve Ctrl + ] 1, 2, 3
 nmap <C-]>1 :diffg LOCAL<CR> " get from LOCAL
