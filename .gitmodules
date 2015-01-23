@@ -1,0 +1,4 @@
+[submodule " bundle/The-NERD-Tree"]
+    path =  bundle/The-NERD-Tree
+    url = http://github.com/lizing/repo.git
+    ignore = untracked
