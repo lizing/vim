@@ -32,6 +32,7 @@ set nu
 set ai
 set cindent
 set smartindent
+syntax on
 
 colorscheme molokai
 
@@ -56,7 +57,9 @@ set showcmd
 
 if has("gui_running")
     set guifont=Consolas:h15
+    set lines=60 columns=100
 endif
+
 let g:molokai_original = 1
 let g:rehash256 = 1
 
