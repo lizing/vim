@@ -3,6 +3,7 @@ filetype off        " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -31,7 +32,8 @@ set nu
 set ai
 set cindent
 set smartindent
-colorscheme desert
+
+colorscheme molokai
 
 set ts=4
 set sw=4
@@ -51,6 +53,9 @@ set nowb
 set noswapfile
 
 set showcmd
+
+let g:molokai_original = 1
+let g:rehash256 = 1
 
 " vimdiff conflict resolve Ctrl + ] 1, 2, 3
 nmap <C-]>1 :diffg LOCAL<CR> " get from LOCAL
