@@ -28,20 +28,28 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+
+" line number
 set nu
+
+" search
+set nowrapscan
+set hlsearch
+set incsearch
+
+" indentation
 set ai
 set cindent
 set smartindent
-syntax on
 
-colorscheme molokai
-
+" space
 set ts=4
 set sw=4
 set sts=4
 set expandtab
 set smarttab
 
+" tags
 set tags=./tags,./.tags,/usr/include/tags/,/usr/include/.tags
 
 filetype plugin on
@@ -49,21 +57,36 @@ filetype indent on
 
 set ffs=unix,dos,mac
 
+" Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
 set nowb
 set noswapfile
 
 set showcmd
 
+" color and gui
+syntax on
+colorscheme molokai
 if has("gui_running")
     set guifont=Consolas:h15
     set lines=60 columns=100
 endif
-
 let g:molokai_original = 1
 let g:rehash256 = 1
+
+" Configure backspace so it acts as it should act
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
+" Show matching brackets when text indicator is over them
+set showmatch 
+" How many tenths of a second to blink when matching brackets
+set mat=2
 
 " vimdiff conflict resolve Ctrl + ] 1, 2, 3
 nmap <C-]>1 :diffg LOCAL<CR> " get from LOCAL
 nmap <C-]>2 :diffg BASE<CR> " get from BASE
 nmap <C-]>3 :diffg REMOTE<CR> " get from REMOTE
+
+" Toggle NERDTree
+map <Leader>nt <ESC>:NERDTree<CR>
