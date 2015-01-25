@@ -31,6 +31,7 @@ filetype plugin indent on    " required
 
 " line number
 set nu
+set ruler
 
 " search
 set nowrapscan
