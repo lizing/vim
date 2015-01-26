@@ -69,7 +69,7 @@ set showcmd
 syntax on
 colorscheme molokai
 if has("gui_running")
-    set guifont=Consolas:h15
+    set guifont=Monaco:h11
     set lines=60 columns=100
 endif
 let g:molokai_original = 1
