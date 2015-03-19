@@ -51,7 +51,8 @@ set expandtab
 set smarttab
 
 " tags
-set tags=./tags,./.tags,/usr/include/tags/,/usr/include/.tags
+set autochdir
+set tags=tags;
 
 filetype plugin on
 filetype indent on
