@@ -63,7 +63,7 @@ set smarttab
 
 " tags
 set autochdir
-set tags=tags;
+set tags=./tags,tags;
 
 filetype plugin on
 filetype indent on
@@ -97,6 +97,9 @@ nmap <C-]>3 :diffg REMOTE<CR> " get from REMOTE
 
 " Toggle NERDTree, Ctrl+O
 map <C-o> :NERDTreeToggle<CR>
+
+" Toggle Tagbar by F8
+nmap <F8> :TagbarToggle<CR>
 
 " Search file by Ctrl+P
 let g:ctrlp_custom_ignore = {
