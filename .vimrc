@@ -1,11 +1,6 @@
 set nocompatible    " be iMproved, required
 filetype off        " required 
 
-" mac configuration
-if has("unix")
-      let s:uname = system("uname -s")
-        if s:uname == "Darwin"
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
@@ -16,11 +11,18 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'The-NERD-Tree'
 Plugin 'taglist.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/syntastic'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'molokai'
+Plugin 'Tagbar'
+Plugin 'jellybeans.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-endif
-endif " end of mac configuration
 
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
@@ -35,6 +37,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+set fileencodings=utf8,euc-kr
 
 " line number
 set nu
@@ -44,6 +47,7 @@ set ruler
 set nowrapscan
 set hlsearch
 set incsearch
+set ignorecase
 
 " indentation
 set ai
@@ -75,14 +79,7 @@ set showcmd
 
 " color and gui
 syntax on
-colorscheme molokai
-
-if has("gui_running")
-    set guifont=Consolas:h14
-    set lines=60 columns=100
-endif
-let g:molokai_original = 1
-let g:rehash256 = 1
+color jellybeans
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
@@ -98,5 +95,14 @@ nmap <C-]>1 :diffg LOCAL<CR> " get from LOCAL
 nmap <C-]>2 :diffg BASE<CR> " get from BASE
 nmap <C-]>3 :diffg REMOTE<CR> " get from REMOTE
 
-" Toggle NERDTree
-map <Leader>nt <ESC>:NERDTree<CR>
+" Toggle NERDTree, Ctrl+O
+map <C-o> :NERDTreeToggle<CR>
+
+" Search file by Ctrl+P
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|public$\|log$\|tmp$\|vendor$',
+  \ 'file': '\v\.(exe|so|dll)$'
+  \ }
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
