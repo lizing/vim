@@ -79,7 +79,8 @@ set showcmd
 
 " color and gui
 syntax on
-color jellybeans
+set t_Co=256
+colorscheme jellybeans
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent

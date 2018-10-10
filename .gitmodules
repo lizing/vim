@@ -1,9 +1,0 @@
-[submodule "bundle/The-NERD-Tree"]
-    path =  bundle/The-NERD-Tree
-    url = http://github.com/lizing/repo.git
-    ignore = untracked
-
-[submodule "bundle/taglist.vim"]
-    path =  bundle/taglist.vim
-    url = http://github.com/lizing/repo.git
-    ignore = untracked
