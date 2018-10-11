@@ -63,6 +63,9 @@ set ai
 set cindent
 set smartindent
 
+" Paste without indentation
+set paste
+
 " space
 set ts=4
 set sw=4
@@ -146,5 +149,12 @@ if has("gui_running")
         set guifont=Consolas:h10
     elseif has("gui_macvim")
         set guifont=Monaco:h12
+    endif
+else
+    if has("win32")
+        set term=xterm
+        set t_Co=256
+        let &t_AB="\e[48;5;%dm"
+        let &t_AF="\e[38;5;%dm"
     endif
 endif
