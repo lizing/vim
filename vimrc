@@ -104,7 +104,13 @@ nmap <C-]>1 :diffg LOCAL<CR> " get from LOCAL
 nmap <C-]>2 :diffg BASE<CR> " get from BASE
 nmap <C-]>3 :diffg REMOTE<CR> " get from REMOTE
 
-" Toggle NERDTree, Ctrl+O
+" Navigate splits through Ctrl+J,K,L,H
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Toggle NERDTree by F7
 nmap <F7> :NERDTreeToggle<CR>
 
 " Toggle Tagbar by F8
@@ -125,15 +131,13 @@ let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
 
 if has("gui_running")
-    set columns=100          " Required for &relativenumber
-    set lines=48            " Increase default height of window
+    set columns=130          " Required for &relativenumber
+    set lines=50            " Increase default height of window
     set guioptions-=T       " Disable toolbar in gVim
-endif
 
-if has("win32")
     if has("gui_win32")
-        try
-            set guifont=Consolas:h10:cANSI
-        endtry
+        set guifont=Consolas:h10
+    elseif has("gui_macvim")
+        set guifont=Monaco:h12
     endif
 endif
