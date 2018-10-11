@@ -20,6 +20,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'molokai'
 Plugin 'Tagbar'
 Plugin 'jellybeans.vim'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'xuyuanp/nerdtree-git-plugin'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
