@@ -1,15 +1,20 @@
 set nocompatible    " be iMproved, required
 filetype off        " required 
 
-set rtp+=~/.vim/bundle/Vundle.vim
+if has("win32")
+    set rtp+=$HOME/vimfiles/bundle/Vundle.vim
+    call vundle#begin('$HOME/vimfiles/bundle/')
+else
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
+endif
 
-call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Plugin 'The-NERD-Tree'
+Plugin 'scrooloose/nerdtree'
 Plugin 'taglist.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -20,8 +25,6 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'molokai'
 Plugin 'Tagbar'
 Plugin 'nanotech/jellybeans.vim'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-surround'
 
@@ -121,19 +124,15 @@ let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
 
 if has("gui_running")
-    set columns=84          " Required for &relativenumber
-    set lines=40            " Increase default height of window
+    set columns=100          " Required for &relativenumber
+    set lines=48            " Increase default height of window
     set guioptions-=T       " Disable toolbar in gVim
 endif
 
 if has("win32")
     if has("gui_win32")
         try
-            set guifont=Consolas:h11:cANSI
+            set guifont=Consolas:h10:cANSI
         endtry
-    endif
-
-    if &term == "win32"
-        colorscheme slate
     endif
 endif
