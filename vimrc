@@ -28,6 +28,7 @@ Plugin 'Tagbar'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-surround'
+Plugin 'klen/python-mode'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -101,6 +102,9 @@ set mat=2
 
 " gitgutter timeout 100ms (default: 4000, 4s)
 set updatetime=100
+
+" Python version
+let g:pymode_python = 'python3'
 
 " vimdiff conflict resolve Ctrl + ] 1, 2, 3
 nmap <C-]>1 :diffg LOCAL<CR> " get from LOCAL
