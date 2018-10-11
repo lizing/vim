@@ -97,7 +97,7 @@ nmap <C-]>2 :diffg BASE<CR> " get from BASE
 nmap <C-]>3 :diffg REMOTE<CR> " get from REMOTE
 
 " Toggle NERDTree, Ctrl+O
-map <C-o> :NERDTreeToggle<CR>
+nmap <F7> :NERDTreeToggle<CR>
 
 " Toggle Tagbar by F8
 nmap <F8> :TagbarToggle<CR>
@@ -110,3 +110,21 @@ let g:ctrlp_custom_ignore = {
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+
+if has("gui_running")
+    set columns=84          " Required for &relativenumber
+    set lines=40            " Increase default height of window
+    set guioptions-=T       " Disable toolbar in gVim
+endif
+
+if has("win32")
+    if has("gui_win32")
+        try
+            set guifont=Consolas:h11:cANSI
+        endtry
+    endif
+
+    if &term == "win32"
+        colorscheme slate
+    endif
+endif
