@@ -19,9 +19,11 @@ Plugin 'scrooloose/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'molokai'
 Plugin 'Tagbar'
-Plugin 'jellybeans.vim'
+Plugin 'nanotech/jellybeans.vim'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'xuyuanp/nerdtree-git-plugin'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'tpope/vim-surround'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -112,6 +114,11 @@ let g:ctrlp_custom_ignore = {
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+
+" Start indent guide
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level=2
+let g:indent_guides_guide_size=1
 
 if has("gui_running")
     set columns=84          " Required for &relativenumber
