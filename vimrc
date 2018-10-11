@@ -99,6 +99,9 @@ set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
+" gitgutter timeout 100ms (default: 4000, 4s)
+set updatetime=100
+
 " vimdiff conflict resolve Ctrl + ] 1, 2, 3
 nmap <C-]>1 :diffg LOCAL<CR> " get from LOCAL
 nmap <C-]>2 :diffg BASE<CR> " get from BASE
@@ -131,7 +134,7 @@ let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
 
 if has("gui_running")
-    set columns=130          " Required for &relativenumber
+    set columns=180          " Required for &relativenumber
     set lines=50            " Increase default height of window
     set guioptions-=T       " Disable toolbar in gVim
 
