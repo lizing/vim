@@ -100,8 +100,8 @@ set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
-" gitgutter timeout 100ms (default: 4000, 4s)
-set updatetime=100
+" gitgutter timeout 1.5s (default: 4000, 4s)
+set updatetime=1500
 
 " Python version
 let g:pymode_python = 'python3'
