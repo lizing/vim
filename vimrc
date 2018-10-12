@@ -28,7 +28,7 @@ Plugin 'Tagbar'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-surround'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'klen/python-mode'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -158,4 +158,9 @@ else
         let &t_AB="\e[48;5;%dm"
         let &t_AF="\e[38;5;%dm"
     endif
+endif
+
+if has('nvim')
+    tnoremap <Esc> <C-\><C-n>
+    nmap <F2> :bel sp 50 <BAR> resize 10 <BAR> terminal <CR>
 endif
