@@ -152,7 +152,7 @@ if has("gui_running")
         set guifont=Monaco:h12
     endif
 else
-    if has("win32")
+    if has("win32") && !has('nvim')
         set term=xterm
         set t_Co=256
         let &t_AB="\e[48;5;%dm"
@@ -161,6 +161,11 @@ else
 endif
 
 if has('nvim')
+    let g:Guifont="Consolas:h10"
     tnoremap <Esc> <C-\><C-n>
     nmap <F2> :bel sp 50 <BAR> resize 10 <BAR> terminal <CR>
+endif
+
+if has('win32')
+    let g:python3_host_prog='C:\Users\user\AppData\Local\Programs\Python\Python36\python.exe'
 endif
