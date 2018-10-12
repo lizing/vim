@@ -28,7 +28,7 @@ Plugin 'Tagbar'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-surround'
-Plugin 'klen/python-mode'
+Plugin 'valloric/youcompleteme'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -107,9 +107,6 @@ set mat=2
 " gitgutter timeout 1.5s (default: 4000, 4s)
 set updatetime=1500
 
-" Python version
-let g:pymode_python = 'python3'
-
 " vimdiff conflict resolve Ctrl + ] 1, 2, 3
 nmap <C-]>1 :diffg LOCAL<CR> " get from LOCAL
 nmap <C-]>2 :diffg BASE<CR> " get from BASE
@@ -164,8 +161,4 @@ if has('nvim')
     let g:Guifont="Consolas:h10"
     tnoremap <Esc> <C-\><C-n>
     nmap <F2> :bel sp 50 <BAR> resize 10 <BAR> terminal <CR>
-endif
-
-if has('win32')
-    let g:python3_host_prog='C:\Users\user\AppData\Local\Programs\Python\Python36\python.exe'
 endif
