@@ -28,7 +28,7 @@ Plugin 'Tagbar'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-surround'
-Plugin 'klen/python-mode'
+Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -47,6 +47,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 set fileencodings=utf8,euc-kr
+set encoding=utf-8
 
 " line number
 set nu
