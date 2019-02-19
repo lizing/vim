@@ -125,6 +125,10 @@ nmap <F7> :NERDTreeToggle<CR>
 " Toggle Tagbar by F8
 nmap <F8> :TagbarToggle<CR>
 
+" Ctags jump shortcut
+nnoremap <F11> <C-]>
+nnoremap <F12> <C-t>
+
 " Search file by Ctrl+P
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|public$\|log$\|tmp$\|vendor$',
