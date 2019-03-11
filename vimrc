@@ -28,7 +28,6 @@ Plugin 'Tagbar'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-surround'
-Plugin 'valloric/youcompleteme'
 Plugin 'scrooloose/nerdcommenter'
 
 " All of your Plugins must be added before the following line
@@ -166,7 +165,7 @@ else
 endif
 
 if has('nvim')
-    let g:Guifont="Consolas:h10"
+    let g:Guifont="Consolas:h9"
     tnoremap <Esc> <C-\><C-n>
     nmap <F2> :bel sp 50 <BAR> resize 10 <BAR> terminal <CR>
 endif
