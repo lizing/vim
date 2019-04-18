@@ -173,3 +173,10 @@ endif
 " YouCompleteMe
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
+
+" Shortcuts for navigating to definitions using YouCompleteMe
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" Open definition in new vertical split
+map <leader>ds :vsp <CR>:exec("YcmCompleter GoToDefinitionElseDeclaration")<CR>
+" Open definition in new tab
+map <leader>dt :tab split<CR>:exec("YcmCompleter GoToDefinitionElseDeclaration")<CR>
