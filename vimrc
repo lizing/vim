@@ -30,6 +30,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'dart-lang/dart-vim-plugin'
+Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -64,9 +65,6 @@ set ignorecase
 set ai
 set cindent
 set smartindent
-
-" Paste without indentation
-set paste
 
 " space
 set ts=4
@@ -170,3 +168,8 @@ if has('nvim')
     tnoremap <Esc> <C-\><C-n>
     nmap <F2> :bel sp 50 <BAR> resize 10 <BAR> terminal <CR>
 endif
+
+
+" YouCompleteMe
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
