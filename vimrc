@@ -30,7 +30,6 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'dart-lang/dart-vim-plugin'
-Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -169,14 +168,3 @@ if has('nvim')
     nmap <F2> :bel sp 50 <BAR> resize 10 <BAR> terminal <CR>
 endif
 
-
-" YouCompleteMe
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-
-" Shortcuts for navigating to definitions using YouCompleteMe
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-" Open definition in new vertical split
-map <leader>ds :vsp <CR>:exec("YcmCompleter GoToDefinitionElseDeclaration")<CR>
-" Open definition in new tab
-map <leader>dt :tab split<CR>:exec("YcmCompleter GoToDefinitionElseDeclaration")<CR>
