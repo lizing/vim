@@ -4,9 +4,8 @@
 
 ### Linux
 ~~~
-git clone git@github.com:lizing/vim.git
-mv vim .vim
-ln -s .vim/.vimrc .vimrc
+git clone git@github.com:lizing/vim.git .vim
+ln -s .vim/vimrc .vimrc
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim
 :VundleInstall
@@ -15,8 +14,7 @@ vim
 ### Windows
 ~~~
 cd %USERPROFILE%
-git clone git@github.com:lizing/vim.git
-mv vim vimfiles
+git clone git@github.com:lizing/vim.git vimfiles
 mklink _vimrc vimfiles\vimrc
 git clone https://github.com/VundleVim/Vundle.vim.git %USERPROFILE%/vimfiles/bundle/Vundle.vim
 vim
