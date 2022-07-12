@@ -169,3 +169,6 @@ if has('nvim')
     nmap <F2> :bel sp 50 <BAR> resize 10 <BAR> terminal <CR>
 endif
 
+" Ctrl+/ to comment/uncomment
+noremap <C-_> :Commentary<cr>
+
